@@ -18,7 +18,7 @@ export default function App() {
       </TouchableHighlight>
 
       <Button
-        title="Press me"
+        title="Press me for an alert"
         onPress={() =>
           Alert.alert('Congratulations', 'You pressed the button', [
             { text: 'Yes', onPress: () => console.log('Yes') },
@@ -26,6 +26,7 @@ export default function App() {
           ])
         }
       />
+      <Button title="Press me for a prompt" onPress={() => Alert.prompt('Congratulations', 'You pressed the button', (text) => console.log(text))} />
 
       <StatusBar style="auto" />
     </SafeAreaView>
