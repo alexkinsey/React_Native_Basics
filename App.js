@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, Image, TouchableWithoutFeedback, TouchableOpacity, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, View, SafeAreaView } from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log('text pressed');
@@ -13,9 +13,11 @@ export default function App() {
         Lots of text can be truncated to display only on one line. This is done but using numberOfLines
       </Text>
 
-      <TouchableOpacity onPress={() => console.log('image tapped')}>
+      <TouchableHighlight onPress={() => console.log('image tapped')}>
         <Image style={styles.imageIcon} source={require('./assets/icon.png')} />
-      </TouchableOpacity>
+      </TouchableHighlight>
+      
+      <View style={{width: 200, height:70, backgroundColor: "blue"}}></View>
 
       <StatusBar style="auto" />
     </SafeAreaView>
