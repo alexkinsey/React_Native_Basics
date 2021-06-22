@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight, Button, View, SafeAreaView } from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log('text pressed');
@@ -16,8 +16,8 @@ export default function App() {
       <TouchableHighlight onPress={() => console.log('image tapped')}>
         <Image style={styles.imageIcon} source={require('./assets/icon.png')} />
       </TouchableHighlight>
-      
-      <View style={{width: 200, height:70, backgroundColor: "blue"}}></View>
+
+      <Button title="Press me" onPress={() => console.log('button tapped')}/>
 
       <StatusBar style="auto" />
     </SafeAreaView>
