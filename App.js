@@ -1,19 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View, SafeAreaView } from 'react-native';
 
 export default function App() {
-  let x = 1;
-
-  console.log('====================================');
-  console.log('app executed');
-  console.log('====================================');
+  const handlePress = () => console.log('text pressed');
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>Hello World!</Text>
+      <Text>Welcome to the app</Text>
+      <Text numberOfLines={1} onPress={handlePress}>Lots of text can be truncated to display only on one line. This is done but using numberOfLines</Text>
+      <Image style={styles.imageIcon} source={require('./assets/icon.png')} />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -24,4 +23,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  imageIcon: {
+    width: 100,
+    height: 100
+  }
 });
